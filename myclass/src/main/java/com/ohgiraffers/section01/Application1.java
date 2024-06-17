@@ -25,10 +25,10 @@ public class Application1 {
             // connection을 이용해 statement 객체생성
             stmt = con.createStatement();
 
-            rset = stmt.executeQuery("select * from class,favorite_subject,tbl_category,tbl_menu,tbl_order_menu,tbl_payment_order");
+            rset = stmt.executeQuery("select student_name,student_no from class,favorite_subject,tbl_category,tbl_menu,tbl_order_menu,tbl_payment_order");
             while (rset.next()) {
                 // . next() : ResultSet의 위치를 하나 내리면서 행이 존재하면 true, 아니면 false
-                System.out.println(rset.getString("rset "));
+                System.out.println(rset.getString("student_name" + '.' + rset.getString("student_name")));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

@@ -67,7 +67,7 @@ public class JDBCTemplate {
         }
     }
 
-    public static void close (ResultSet rset){
+    public static void close(ResultSet rset) {
         try {
             if (rset != null && !rset.isClosed()) {
                 rset.close();

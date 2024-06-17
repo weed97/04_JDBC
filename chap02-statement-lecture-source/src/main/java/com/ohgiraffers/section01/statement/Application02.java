@@ -34,7 +34,7 @@ public class Application02 {
             rset = stmt.executeQuery(query);
 
 // 6. 쿼리문의 결과를 컬럼 이름음ㄹ 이용해서 사용
-            if(rset.next()) {
+            if (rset.next()) {
                 System.out.println(rset.getString("EMP_ID") + ',' + rset.getString("EMP_NAME"));
             }
         } catch (SQLException e) {
