@@ -14,7 +14,7 @@ import java.sql.Date;
 
 public class EmployeeDTO {
 
-    private String empID;
+    private String empId;
     private String empName;
     private String empNo;
     private String email;
@@ -34,8 +34,8 @@ public class EmployeeDTO {
 
 
 
-    public EmployeeDTO(String empID, String empName, String empNo, String email, String phone, String deptCode, String salLevel, double salary, double bonus, String managerId, Date hireDate, Date entDATE, String entYN) {
-        this.empID = empID;
+    public EmployeeDTO(String empId, String empName, String empNo, String email, String phone, String deptCode, String salLevel, double salary, double bonus, String managerId, Date hireDate, Date entDATE, String entYN) {
+        this.empId = empId;
         this.empName = empName;
         this.empNo = empNo;
         this.email = email;
@@ -62,11 +62,11 @@ public class EmployeeDTO {
     }
 
     public String getEmpID() {
-        return empID;
+        return empId;
     }
 
-    public void setEmpID(String empID) {
-        this.empID = empID;
+    public void setEmpID(String empId) {
+        this.empId = empId;
     }
 
     public String getEmpName() {
@@ -169,7 +169,7 @@ public class EmployeeDTO {
     @Override
     public String toString() {
         return "EmployeeDTO{" +
-                "empID='" + empID + '\'' +
+                "empId='" + empId + '\'' +
                 ", empName='" + empName + '\'' +
                 ", empNo='" + empNo + '\'' +
                 ", email='" + email + '\'' +

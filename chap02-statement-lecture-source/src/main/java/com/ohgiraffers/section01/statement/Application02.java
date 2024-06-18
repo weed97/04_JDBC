@@ -33,7 +33,7 @@ public class Application02 {
             // 5. executeQuery()로 쿼리문을 실행하고 결과를 ResultSet 반환 받기
             rset = stmt.executeQuery(query);
 
-// 6. 쿼리문의 결과를 컬럼 이름음ㄹ 이용해서 사용
+// 6. 쿼리문의 결과를 컬럼 이름을 이용해서 사용
             if (rset.next()) {
                 System.out.println(rset.getString("EMP_ID") + ',' + rset.getString("EMP_NAME"));
             }
