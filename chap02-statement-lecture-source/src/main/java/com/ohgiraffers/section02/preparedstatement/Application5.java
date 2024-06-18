@@ -78,17 +78,18 @@ public class Application5 {
         } catch (SQLException e) { // catch 에 SQL문으로 저장된 파일을 익셉션하기 위해 e로 선언한다.
             throw new RuntimeException(e); // RuntimeException에 e에 SQLException에 e값에 들어가서 익셉션이 새롭게 생성된다.
         } catch (InvalidPropertiesFormatException e) { // InvailPropertiesFromatException e
+            throw new RuntimeException(e); // RuntimeException 을 발생 시킨다.
+        } catch (FileNotFoundException e) { // FileNotFoundException 을 발생 시킨다.
             throw new RuntimeException(e);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
+        } catch (IOException e) { // IOException을 발생시킨다.
             throw new RuntimeException(e);
         } finally {
+            // 자원을 반납한다.
             close(rset);
             close(pstmt);
             close(con);
         }
-
+        // 향상된 포문을 사용해서 empList에 조회해서 DemployeeDTO 형식의 emp을 출력해준다.
         for (EmployeeDTO emp : empList) {
             System.out.println(emp);
         }
