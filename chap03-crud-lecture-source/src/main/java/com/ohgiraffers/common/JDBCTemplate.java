@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
 
-public class JOBCTemplate {
+public class JDBCTemplate {
 
     //Connection을 반환하는 getConnection() 메소드
 
