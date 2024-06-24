@@ -1,12 +1,14 @@
-package com.ohgiraffers.section01.xmlconfig;
+package com.ohgiraffers.section02.javaconfig;
 
-import org.w3c.dom.ls.LSOutput;
+
+
+
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Application {
+public class Application{
 
     /*
      * 시스템 요구사항
@@ -32,17 +34,17 @@ public class Application {
             int no = sc.nextInt();
 
             switch (no) {
-//                case 1: menuController.selectAllMenu(); break;
+              case 1: menuController.selectAllMenu(); break;
                 case 2:
                     menuController.selectMenuByCode(inputMenuCode());
                     break;
               case 3:
                  menuController.registMenu(inputMenu());
                     break;
-                case 4: menuController.modifyMenu(inputModifyMenu());
-                    break;
-                case 5: menuController.deleteMenu(inputMenuCode());
-                    break;
+//                case 4: menuController.modifyMenu(inputModifyMenu());
+//                    break;
+////                case 5: menuController.deleteMenu(inputMenuCode());
+//                    break;
                 default:
                     System.out.println("잘못된 메뉴를 선택하셨습니다.");
                     break;
@@ -89,13 +91,13 @@ public class Application {
 
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("수정할 메뉴 코드을 입력하세요");
+        System.out.print("수정할 메뉴 코드을 입력하세요");
         String code = sc.nextLine();
-        System.out.println("수정할 메뉴 코드을 입력하세요");
+        System.out.print("수정할 메뉴 코드을 입력하세요");
         String name = sc.nextLine();
-        System.out.println("수정할 메뉴 가격을 입력하세요");
+        System.out.print("수정할 메뉴 가격을 입력하세요");
         String price = sc.nextLine();
-        System.out.println("수정할 카테고리 코드를 입력하세요");
+        System.out.print("수정할 카테고리 코드를 입력하세요");
         String categoryCdoe = sc.nextLine();
 
         Map<String,String> parameter = new HashMap<>();

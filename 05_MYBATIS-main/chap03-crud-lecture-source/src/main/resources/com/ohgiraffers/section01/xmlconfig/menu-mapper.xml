@@ -53,4 +53,22 @@
         'Y'
         )
     </insert>
+
+    <update id="updatemenu" parameterType="com.ohgiraffers.section01.xmlconfig.MenuDTO">
+        update tbl_menu
+        set
+        menu_name = # { name },
+        menu_price = # { price },
+        category_code = # { categoryCode }
+        where
+        menu_Code = # { code }
+
+    </update>
+
+    <delete id="deleteMenu" parameterType="_int">
+        delete
+        form tbl_menu
+        where menu_code = # { code }
+
+    </delete>
 </mapper>
